@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
         <Col xs={24} sm={12} lg={8}>
           <Card>
             <Statistic
-              title="Active Trades"
+              title="Active Strategies"
               value={0}
               prefix={<ShoppingCartOutlined style={{ color: '#1890ff' }} />}
             />
@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
 
       <Card title="Quick Start" style={{ marginTop: 24 }}>
         <p style={{ color: '#666', margin: 0 }}>
-          Get started by creating a new trade in the Trades page, or run a backtest
+          Get started by creating a new strategy in the Strategies page, or run a backtest
           on an existing strategy to see how it would have performed historically.
         </p>
       </Card>

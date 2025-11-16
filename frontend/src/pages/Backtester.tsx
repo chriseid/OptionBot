@@ -1,15 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Form, InputNumber, DatePicker, Select, Button, Space } from 'antd';
+import { Strategy } from '../types';
+import { strategyService } from '../services/api';
 import dayjs, { Dayjs } from 'dayjs';
 
 const { Option: SelectOption } = Select;
 
 const Backtester: React.FC = () => {
   const [form] = Form.useForm();
+  const [strategies, setStrategies] = useState<Strategy[]>([]);
   const [strategyId, setStrategyId] = useState('');
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
   const [endDate, setEndDate] = useState<Dayjs | null>(null);
   const [initialCapital, setInitialCapital] = useState(10000);
+
+  // Load strategies on mount
+  useEffect(() => {
+    loadStrategies();
+  }, []);
+
+  const loadStrategies = async () => {
+    try {
+      // TODO: Use actual API call when backend is ready
+      // const response = await strategyService.getAll();
+      // setStrategies(response.data);
+      
+      // For now, load from localStorage or use empty array
+      // Strategies will be loaded from the Strategies page state
+      const savedStrategies = localStorage.getItem('strategies');
+      if (savedStrategies) {
+        setStrategies(JSON.parse(savedStrategies));
+      }
+    } catch (error) {
+      console.error('Failed to load strategies:', error);
+    }
+  };
 
   const handleRunBacktest = () => {
     // TODO: Implement backtest logic
@@ -36,7 +61,15 @@ const Backtester: React.FC = () => {
               onChange={setStrategyId}
               placeholder="Select a strategy"
             >
-              <SelectOption value="">No strategies available</SelectOption>
+              {strategies.length === 0 ? (
+                <SelectOption value="">No strategies available</SelectOption>
+              ) : (
+                strategies.map((strategy) => (
+                  <SelectOption key={strategy.id} value={strategy.id}>
+                    {strategy.name}
+                  </SelectOption>
+                ))
+              )}
             </Select>
           </Form.Item>
 
