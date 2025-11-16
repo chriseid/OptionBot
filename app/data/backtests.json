@@ -1,1 +1,2298 @@
-[]
+[
+  {
+    "strategyId": "0e1f8502-62f5-4495-a8f6-a841990dd7d7",
+    "backtestId": "12c44062-4456-49b9-b4b2-3be5d1b6a9c0",
+    "startDate": "2024-01-02",
+    "endDate": "2024-01-08",
+    "initialCapital": 10000.0,
+    "finalCapital": 9790.0,
+    "totalReturn": -2.1,
+    "maxDrawdown": -5.2,
+    "sharpeRatio": 1.85,
+    "trades": [
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 1.95,
+        "pnl": -195.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": -42.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.75,
+        "pnl": -75.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": -110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.8,
+        "pnl": -80.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.6,
+        "pnl": 60.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": -10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": 110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": 42.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 0.95,
+        "pnl": -95.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 1.65,
+        "pnl": -165.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": -90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": 22.5
+      }
+    ],
+    "createdAt": "2025-11-16T22:05:36.206156"
+  },
+  {
+    "strategyId": "0e1f8502-62f5-4495-a8f6-a841990dd7d7",
+    "backtestId": "74ef5ebf-856a-41ef-8730-9e23eefa920e",
+    "startDate": "2024-01-02",
+    "endDate": "2024-01-08",
+    "initialCapital": 10000.0,
+    "finalCapital": 9790.0,
+    "totalReturn": -2.1,
+    "maxDrawdown": -5.2,
+    "sharpeRatio": 1.85,
+    "trades": [
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 1.95,
+        "pnl": -195.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": -42.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.75,
+        "pnl": -75.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": -110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.8,
+        "pnl": -80.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.6,
+        "pnl": 60.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": -10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": 110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": 42.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 0.95,
+        "pnl": -95.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 1.65,
+        "pnl": -165.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": -90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": 22.5
+      }
+    ],
+    "createdAt": "2025-11-16T22:10:45.159101"
+  },
+  {
+    "strategyId": "0e1f8502-62f5-4495-a8f6-a841990dd7d7",
+    "backtestId": "484388c1-c002-4887-b822-b9e3a08edc19",
+    "startDate": "2024-01-02",
+    "endDate": "2024-01-08",
+    "initialCapital": 10000.0,
+    "finalCapital": 9790.0,
+    "totalReturn": -2.1,
+    "maxDrawdown": -5.2,
+    "sharpeRatio": 1.85,
+    "trades": [
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 1.95,
+        "pnl": -195.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": -42.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.75,
+        "pnl": -75.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": -110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.8,
+        "pnl": -80.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.6,
+        "pnl": 60.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": -10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": 110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": 42.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 0.95,
+        "pnl": -95.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 1.65,
+        "pnl": -165.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": -90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": 22.5
+      }
+    ],
+    "createdAt": "2025-11-16T22:12:50.955294"
+  },
+  {
+    "strategyId": "0e1f8502-62f5-4495-a8f6-a841990dd7d7",
+    "backtestId": "a0ff6954-2200-4e84-b8c8-3ccdc98e8ec9",
+    "startDate": "2024-01-02",
+    "endDate": "2024-01-08",
+    "initialCapital": 10000.0,
+    "finalCapital": 9790.0,
+    "totalReturn": -2.1,
+    "maxDrawdown": -5.2,
+    "sharpeRatio": 1.85,
+    "trades": [
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-02",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-02",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 470.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 475.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 1.95,
+        "pnl": -195.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-03",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-03",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 471.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 476.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": -42.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.75,
+        "pnl": -75.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-04",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-04",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": -32.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 472.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": 10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 477.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": -110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.8,
+        "pnl": -80.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.325,
+          "quantity": 1
+        },
+        "price": 0.6,
+        "pnl": 60.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.1,
+        "pnl": -10.0
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 1.1,
+        "pnl": 110.00000000000001
+      },
+      {
+        "date": "2024-01-05",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 0.425,
+        "pnl": 42.5
+      },
+      {
+        "date": "2024-01-05",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 473.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.1,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 478.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 1.1,
+          "quantity": 1
+        },
+        "price": 0.95,
+        "pnl": -95.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 480.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.425,
+          "quantity": 1
+        },
+        "price": 1.65,
+        "pnl": -165.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 483.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.325,
+        "pnl": 32.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": -12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": 47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": 90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": -22.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 474.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.125,
+          "quantity": 1
+        },
+        "price": 0.125,
+        "pnl": 12.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 479.0,
+          "expiration": "0DTE",
+          "optionType": "put",
+          "premium": 0.475,
+          "quantity": 1
+        },
+        "price": 0.475,
+        "pnl": -47.5
+      },
+      {
+        "date": "2024-01-08",
+        "action": "buy",
+        "option": {
+          "symbol": "SPY",
+          "strike": 481.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.9,
+          "quantity": 1
+        },
+        "price": 0.9,
+        "pnl": -90.0
+      },
+      {
+        "date": "2024-01-08",
+        "action": "sell",
+        "option": {
+          "symbol": "SPY",
+          "strike": 484.0,
+          "expiration": "0DTE",
+          "optionType": "call",
+          "premium": 0.225,
+          "quantity": 1
+        },
+        "price": 0.225,
+        "pnl": 22.5
+      }
+    ],
+    "createdAt": "2025-11-16T22:14:25.216327"
+  }
+]

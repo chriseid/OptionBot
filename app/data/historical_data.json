@@ -91,6 +91,105 @@
         "volume": 1200,
         "openInterest": 4000,
         "impliedVolatility": 0.11
+      },
+      {
+        "strike": 470.0,
+        "expiration": "2024-01-02",
+        "optionType": "put",
+        "bid": 0.10,
+        "ask": 0.15,
+        "mid": 0.125,
+        "volume": 2000,
+        "openInterest": 6000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 475.0,
+        "expiration": "2024-01-02",
+        "optionType": "put",
+        "bid": 0.45,
+        "ask": 0.50,
+        "mid": 0.475,
+        "volume": 2500,
+        "openInterest": 9000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 477.0,
+        "expiration": "2024-01-02",
+        "optionType": "put",
+        "bid": 0.90,
+        "ask": 1.00,
+        "mid": 0.95,
+        "volume": 3500,
+        "openInterest": 13000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 477.0,
+        "expiration": "2024-01-02",
+        "optionType": "call",
+        "bid": 0.85,
+        "ask": 0.95,
+        "mid": 0.90,
+        "volume": 3400,
+        "openInterest": 12000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 480.0,
+        "expiration": "2024-01-02",
+        "optionType": "call",
+        "bid": 0.30,
+        "ask": 0.35,
+        "mid": 0.325,
+        "volume": 2000,
+        "openInterest": 8000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 482.0,
+        "expiration": "2024-01-02",
+        "optionType": "call",
+        "bid": 0.12,
+        "ask": 0.17,
+        "mid": 0.145,
+        "volume": 1500,
+        "openInterest": 5000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 472.0,
+        "expiration": "2024-01-02",
+        "optionType": "put",
+        "bid": 0.25,
+        "ask": 0.30,
+        "mid": 0.275,
+        "volume": 1800,
+        "openInterest": 7000,
+        "impliedVolatility": 0.19
+      },
+      {
+        "strike": 478.0,
+        "expiration": "2024-01-02",
+        "optionType": "call",
+        "bid": 0.55,
+        "ask": 0.65,
+        "mid": 0.60,
+        "volume": 2400,
+        "openInterest": 9500,
+        "impliedVolatility": 0.21
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-02",
+        "optionType": "call",
+        "bid": 0.20,
+        "ask": 0.25,
+        "mid": 0.225,
+        "volume": 1700,
+        "openInterest": 7500,
+        "impliedVolatility": 0.19
       }
     ]
   },
@@ -186,6 +285,105 @@
         "volume": 1100,
         "openInterest": 4000,
         "impliedVolatility": 0.10
+      },
+      {
+        "strike": 471.0,
+        "expiration": "2024-01-03",
+        "optionType": "put",
+        "bid": 0.10,
+        "ask": 0.15,
+        "mid": 0.125,
+        "volume": 2000,
+        "openInterest": 6000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 476.0,
+        "expiration": "2024-01-03",
+        "optionType": "put",
+        "bid": 0.45,
+        "ask": 0.50,
+        "mid": 0.475,
+        "volume": 2500,
+        "openInterest": 9000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 478.0,
+        "expiration": "2024-01-03",
+        "optionType": "put",
+        "bid": 0.90,
+        "ask": 1.00,
+        "mid": 0.95,
+        "volume": 3500,
+        "openInterest": 13000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 478.0,
+        "expiration": "2024-01-03",
+        "optionType": "call",
+        "bid": 0.85,
+        "ask": 0.95,
+        "mid": 0.90,
+        "volume": 3400,
+        "openInterest": 12000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-03",
+        "optionType": "call",
+        "bid": 0.30,
+        "ask": 0.35,
+        "mid": 0.325,
+        "volume": 2000,
+        "openInterest": 8000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 483.0,
+        "expiration": "2024-01-03",
+        "optionType": "call",
+        "bid": 0.12,
+        "ask": 0.17,
+        "mid": 0.145,
+        "volume": 1500,
+        "openInterest": 5000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 473.0,
+        "expiration": "2024-01-03",
+        "optionType": "put",
+        "bid": 0.25,
+        "ask": 0.30,
+        "mid": 0.275,
+        "volume": 1800,
+        "openInterest": 7000,
+        "impliedVolatility": 0.19
+      },
+      {
+        "strike": 479.0,
+        "expiration": "2024-01-03",
+        "optionType": "call",
+        "bid": 0.55,
+        "ask": 0.65,
+        "mid": 0.60,
+        "volume": 2400,
+        "openInterest": 9500,
+        "impliedVolatility": 0.21
+      },
+      {
+        "strike": 482.0,
+        "expiration": "2024-01-03",
+        "optionType": "call",
+        "bid": 0.20,
+        "ask": 0.25,
+        "mid": 0.225,
+        "volume": 1700,
+        "openInterest": 7500,
+        "impliedVolatility": 0.19
       }
     ]
   },
@@ -281,6 +479,105 @@
         "volume": 1000,
         "openInterest": 4000,
         "impliedVolatility": 0.09
+      },
+      {
+        "strike": 472.0,
+        "expiration": "2024-01-04",
+        "optionType": "put",
+        "bid": 0.10,
+        "ask": 0.15,
+        "mid": 0.125,
+        "volume": 2000,
+        "openInterest": 6000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 477.0,
+        "expiration": "2024-01-04",
+        "optionType": "put",
+        "bid": 0.45,
+        "ask": 0.50,
+        "mid": 0.475,
+        "volume": 2500,
+        "openInterest": 9000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 479.0,
+        "expiration": "2024-01-04",
+        "optionType": "put",
+        "bid": 0.90,
+        "ask": 1.00,
+        "mid": 0.95,
+        "volume": 3500,
+        "openInterest": 13000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 479.0,
+        "expiration": "2024-01-04",
+        "optionType": "call",
+        "bid": 0.85,
+        "ask": 0.95,
+        "mid": 0.90,
+        "volume": 3400,
+        "openInterest": 12000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-04",
+        "optionType": "call",
+        "bid": 0.30,
+        "ask": 0.35,
+        "mid": 0.325,
+        "volume": 2000,
+        "openInterest": 8000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 483.0,
+        "expiration": "2024-01-04",
+        "optionType": "call",
+        "bid": 0.12,
+        "ask": 0.17,
+        "mid": 0.145,
+        "volume": 1500,
+        "openInterest": 5000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 474.0,
+        "expiration": "2024-01-04",
+        "optionType": "put",
+        "bid": 0.25,
+        "ask": 0.30,
+        "mid": 0.275,
+        "volume": 1800,
+        "openInterest": 7000,
+        "impliedVolatility": 0.19
+      },
+      {
+        "strike": 480.0,
+        "expiration": "2024-01-04",
+        "optionType": "call",
+        "bid": 0.55,
+        "ask": 0.65,
+        "mid": 0.60,
+        "volume": 2400,
+        "openInterest": 9500,
+        "impliedVolatility": 0.21
+      },
+      {
+        "strike": 482.0,
+        "expiration": "2024-01-04",
+        "optionType": "call",
+        "bid": 0.20,
+        "ask": 0.25,
+        "mid": 0.225,
+        "volume": 1700,
+        "openInterest": 7500,
+        "impliedVolatility": 0.19
       }
     ]
   },
@@ -376,6 +673,105 @@
         "volume": 900,
         "openInterest": 4000,
         "impliedVolatility": 0.07
+      },
+      {
+        "strike": 473.0,
+        "expiration": "2024-01-05",
+        "optionType": "put",
+        "bid": 0.08,
+        "ask": 0.12,
+        "mid": 0.10,
+        "volume": 2000,
+        "openInterest": 6000,
+        "impliedVolatility": 0.16
+      },
+      {
+        "strike": 478.0,
+        "expiration": "2024-01-05",
+        "optionType": "put",
+        "bid": 0.40,
+        "ask": 0.45,
+        "mid": 0.425,
+        "volume": 2500,
+        "openInterest": 9000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 480.0,
+        "expiration": "2024-01-05",
+        "optionType": "put",
+        "bid": 0.85,
+        "ask": 0.95,
+        "mid": 0.90,
+        "volume": 3500,
+        "openInterest": 13000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 480.0,
+        "expiration": "2024-01-05",
+        "optionType": "call",
+        "bid": 0.80,
+        "ask": 0.90,
+        "mid": 0.85,
+        "volume": 3400,
+        "openInterest": 12000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 482.0,
+        "expiration": "2024-01-05",
+        "optionType": "call",
+        "bid": 0.28,
+        "ask": 0.33,
+        "mid": 0.305,
+        "volume": 2000,
+        "openInterest": 8000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 485.0,
+        "expiration": "2024-01-05",
+        "optionType": "call",
+        "bid": 0.10,
+        "ask": 0.15,
+        "mid": 0.125,
+        "volume": 1500,
+        "openInterest": 5000,
+        "impliedVolatility": 0.16
+      },
+      {
+        "strike": 475.0,
+        "expiration": "2024-01-05",
+        "optionType": "put",
+        "bid": 0.25,
+        "ask": 0.30,
+        "mid": 0.275,
+        "volume": 1800,
+        "openInterest": 7000,
+        "impliedVolatility": 0.19
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-05",
+        "optionType": "call",
+        "bid": 0.55,
+        "ask": 0.65,
+        "mid": 0.60,
+        "volume": 2400,
+        "openInterest": 9500,
+        "impliedVolatility": 0.21
+      },
+      {
+        "strike": 483.0,
+        "expiration": "2024-01-05",
+        "optionType": "call",
+        "bid": 0.20,
+        "ask": 0.25,
+        "mid": 0.225,
+        "volume": 1700,
+        "openInterest": 7500,
+        "impliedVolatility": 0.19
       }
     ]
   },
@@ -471,6 +867,105 @@
         "volume": 1000,
         "openInterest": 4500,
         "impliedVolatility": 0.10
+      },
+      {
+        "strike": 474.0,
+        "expiration": "2024-01-08",
+        "optionType": "put",
+        "bid": 0.10,
+        "ask": 0.15,
+        "mid": 0.125,
+        "volume": 2000,
+        "openInterest": 6000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 479.0,
+        "expiration": "2024-01-08",
+        "optionType": "put",
+        "bid": 0.45,
+        "ask": 0.50,
+        "mid": 0.475,
+        "volume": 2500,
+        "openInterest": 9000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-08",
+        "optionType": "put",
+        "bid": 0.90,
+        "ask": 1.00,
+        "mid": 0.95,
+        "volume": 3500,
+        "openInterest": 13000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-08",
+        "optionType": "call",
+        "bid": 0.85,
+        "ask": 0.95,
+        "mid": 0.90,
+        "volume": 3400,
+        "openInterest": 12000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 483.0,
+        "expiration": "2024-01-08",
+        "optionType": "call",
+        "bid": 0.30,
+        "ask": 0.35,
+        "mid": 0.325,
+        "volume": 2000,
+        "openInterest": 8000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 486.0,
+        "expiration": "2024-01-08",
+        "optionType": "call",
+        "bid": 0.12,
+        "ask": 0.17,
+        "mid": 0.145,
+        "volume": 1500,
+        "openInterest": 5000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 476.0,
+        "expiration": "2024-01-08",
+        "optionType": "put",
+        "bid": 0.25,
+        "ask": 0.30,
+        "mid": 0.275,
+        "volume": 1800,
+        "openInterest": 7000,
+        "impliedVolatility": 0.19
+      },
+      {
+        "strike": 482.0,
+        "expiration": "2024-01-08",
+        "optionType": "call",
+        "bid": 0.55,
+        "ask": 0.65,
+        "mid": 0.60,
+        "volume": 2400,
+        "openInterest": 9500,
+        "impliedVolatility": 0.21
+      },
+      {
+        "strike": 484.0,
+        "expiration": "2024-01-08",
+        "optionType": "call",
+        "bid": 0.20,
+        "ask": 0.25,
+        "mid": 0.225,
+        "volume": 1700,
+        "openInterest": 7500,
+        "impliedVolatility": 0.19
       }
     ]
   },
@@ -566,6 +1061,105 @@
         "volume": 900,
         "openInterest": 4500,
         "impliedVolatility": 0.09
+      },
+      {
+        "strike": 474.0,
+        "expiration": "2024-01-09",
+        "optionType": "put",
+        "bid": 0.10,
+        "ask": 0.15,
+        "mid": 0.125,
+        "volume": 2000,
+        "openInterest": 6000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 479.0,
+        "expiration": "2024-01-09",
+        "optionType": "put",
+        "bid": 0.45,
+        "ask": 0.50,
+        "mid": 0.475,
+        "volume": 2500,
+        "openInterest": 9000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-09",
+        "optionType": "put",
+        "bid": 0.90,
+        "ask": 1.00,
+        "mid": 0.95,
+        "volume": 3500,
+        "openInterest": 13000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 481.0,
+        "expiration": "2024-01-09",
+        "optionType": "call",
+        "bid": 0.85,
+        "ask": 0.95,
+        "mid": 0.90,
+        "volume": 3400,
+        "openInterest": 12000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 484.0,
+        "expiration": "2024-01-09",
+        "optionType": "call",
+        "bid": 0.30,
+        "ask": 0.35,
+        "mid": 0.325,
+        "volume": 2000,
+        "openInterest": 8000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 487.0,
+        "expiration": "2024-01-09",
+        "optionType": "call",
+        "bid": 0.12,
+        "ask": 0.17,
+        "mid": 0.145,
+        "volume": 1500,
+        "openInterest": 5000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 477.0,
+        "expiration": "2024-01-09",
+        "optionType": "put",
+        "bid": 0.25,
+        "ask": 0.30,
+        "mid": 0.275,
+        "volume": 1800,
+        "openInterest": 7000,
+        "impliedVolatility": 0.19
+      },
+      {
+        "strike": 483.0,
+        "expiration": "2024-01-09",
+        "optionType": "call",
+        "bid": 0.55,
+        "ask": 0.65,
+        "mid": 0.60,
+        "volume": 2400,
+        "openInterest": 9500,
+        "impliedVolatility": 0.21
+      },
+      {
+        "strike": 485.0,
+        "expiration": "2024-01-09",
+        "optionType": "call",
+        "bid": 0.20,
+        "ask": 0.25,
+        "mid": 0.225,
+        "volume": 1700,
+        "openInterest": 7500,
+        "impliedVolatility": 0.19
       }
     ]
   },
@@ -661,6 +1255,105 @@
         "volume": 800,
         "openInterest": 4500,
         "impliedVolatility": 0.08
+      },
+      {
+        "strike": 475.0,
+        "expiration": "2024-01-10",
+        "optionType": "put",
+        "bid": 0.10,
+        "ask": 0.15,
+        "mid": 0.125,
+        "volume": 2000,
+        "openInterest": 6000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 480.0,
+        "expiration": "2024-01-10",
+        "optionType": "put",
+        "bid": 0.45,
+        "ask": 0.50,
+        "mid": 0.475,
+        "volume": 2500,
+        "openInterest": 9000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 483.0,
+        "expiration": "2024-01-10",
+        "optionType": "put",
+        "bid": 0.90,
+        "ask": 1.00,
+        "mid": 0.95,
+        "volume": 3500,
+        "openInterest": 13000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 483.0,
+        "expiration": "2024-01-10",
+        "optionType": "call",
+        "bid": 0.85,
+        "ask": 0.95,
+        "mid": 0.90,
+        "volume": 3400,
+        "openInterest": 12000,
+        "impliedVolatility": 0.22
+      },
+      {
+        "strike": 485.0,
+        "expiration": "2024-01-10",
+        "optionType": "call",
+        "bid": 0.30,
+        "ask": 0.35,
+        "mid": 0.325,
+        "volume": 2000,
+        "openInterest": 8000,
+        "impliedVolatility": 0.20
+      },
+      {
+        "strike": 488.0,
+        "expiration": "2024-01-10",
+        "optionType": "call",
+        "bid": 0.12,
+        "ask": 0.17,
+        "mid": 0.145,
+        "volume": 1500,
+        "openInterest": 5000,
+        "impliedVolatility": 0.18
+      },
+      {
+        "strike": 478.0,
+        "expiration": "2024-01-10",
+        "optionType": "put",
+        "bid": 0.25,
+        "ask": 0.30,
+        "mid": 0.275,
+        "volume": 1800,
+        "openInterest": 7000,
+        "impliedVolatility": 0.19
+      },
+      {
+        "strike": 484.0,
+        "expiration": "2024-01-10",
+        "optionType": "call",
+        "bid": 0.55,
+        "ask": 0.65,
+        "mid": 0.60,
+        "volume": 2400,
+        "openInterest": 9500,
+        "impliedVolatility": 0.21
+      },
+      {
+        "strike": 486.0,
+        "expiration": "2024-01-10",
+        "optionType": "call",
+        "bid": 0.20,
+        "ask": 0.25,
+        "mid": 0.225,
+        "volume": 1700,
+        "openInterest": 7500,
+        "impliedVolatility": 0.19
       }
     ]
   }
