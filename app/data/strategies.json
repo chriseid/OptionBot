@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "0e1f8502-62f5-4495-a8f6-a841990dd7d7",
+    "name": "Iron Condor - SPY 0DTE",
+    "symbol": "SPY",
+    "strategy": "Iron Condor",
+    "expiration": "0DTE",
+    "legs": {
+      "longPut": -0.15,
+      "shortPut": -0.25,
+      "shortCall": 0.25,
+      "longCall": 0.35
+    },
+    "quantity": 1,
+    "createdAt": "2025-11-16T16:32:31.449477"
+  }
+]

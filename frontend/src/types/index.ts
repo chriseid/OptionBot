@@ -21,6 +21,7 @@ export interface Strategy {
 
 export interface BacktestResult {
   strategyId: string;
+  backtestId: string;
   startDate: string;
   endDate: string;
   initialCapital: number;
@@ -29,6 +30,7 @@ export interface BacktestResult {
   maxDrawdown: number;
   sharpeRatio: number;
   trades: Trade[];
+  createdAt: string;
 }
 
 export interface Trade {

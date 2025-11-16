@@ -1,21 +1,33 @@
-import React, { useState } from 'react';
-import { Card, Table, Button, message } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
+import React, { useState, useEffect } from 'react';
+import { Card, Table, Button, message, Popconfirm, Space } from 'antd';
+import { PlusOutlined, DeleteOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
 import { Strategy, CreateStrategyFormData } from '../types';
+import { strategyService } from '../services/api';
 import CreateStrategyModal from '../components/CreateStrategyModal';
 
 const Strategies: React.FC = () => {
   const [strategies, setStrategies] = useState<Strategy[]>([]);
   const [modalVisible, setModalVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  // Load strategies from localStorage on mount
+  // Load strategies from API on mount
   React.useEffect(() => {
-    const savedStrategies = localStorage.getItem('strategies');
-    if (savedStrategies) {
-      setStrategies(JSON.parse(savedStrategies));
-    }
+    loadStrategies();
   }, []);
+
+  const loadStrategies = async () => {
+    try {
+      setLoading(true);
+      const response = await strategyService.getAll();
+      setStrategies(response.data);
+    } catch (error: any) {
+      message.error('Failed to load strategies');
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleCreateStrategy = () => {
     console.log('Opening create strategy modal');
@@ -28,28 +40,23 @@ const Strategies: React.FC = () => {
 
   const handleStrategySubmit = async (data: CreateStrategyFormData) => {
     try {
-      // Create strategy with delta values
-      const newStrategy: Strategy = {
-        id: Date.now().toString(),
-        name: `${data.strategy} - ${data.symbol} ${data.expiration}`,
-        symbol: data.symbol,
-        strategy: data.strategy,
-        expiration: data.expiration,
-        legs: data.legs,
-        quantity: data.quantity,
-        createdAt: new Date().toISOString(),
-      };
-
-      const updatedStrategies = [...strategies, newStrategy];
-      setStrategies(updatedStrategies);
-      
-      // Save to localStorage so Backtester can access it
-      localStorage.setItem('strategies', JSON.stringify(updatedStrategies));
-      
+      const response = await strategyService.create(data);
       message.success('Strategy created successfully!');
       setModalVisible(false);
-    } catch (error) {
-      message.error('Failed to create strategy');
+      loadStrategies(); // Reload strategies from API
+    } catch (error: any) {
+      message.error(error.response?.data?.detail || 'Failed to create strategy');
+      console.error(error);
+    }
+  };
+
+  const handleDeleteStrategy = async (id: string) => {
+    try {
+      await strategyService.delete(id);
+      message.success('Strategy deleted successfully!');
+      loadStrategies(); // Reload strategies from API
+    } catch (error: any) {
+      message.error(error.response?.data?.detail || 'Failed to delete strategy');
       console.error(error);
     }
   };
@@ -91,6 +98,26 @@ const Strategies: React.FC = () => {
       },
     },
     {
+      title: 'Actions',
+      key: 'actions',
+      render: (_, record) => (
+        <Space>
+          <Popconfirm
+            title="Are you sure you want to delete this strategy?"
+            onConfirm={() => handleDeleteStrategy(record.id)}
+            okText="Yes"
+            cancelText="No"
+          >
+            <Button
+              type="text"
+              danger
+              icon={<DeleteOutlined />}
+            />
+          </Popconfirm>
+        </Space>
+      ),
+    },
+    {
       title: 'Created',
       dataIndex: 'createdAt',
       key: 'createdAt',
@@ -122,6 +149,7 @@ const Strategies: React.FC = () => {
           columns={columns}
           dataSource={strategies}
           rowKey="id"
+          loading={loading}
           pagination={{ pageSize: 10 }}
           locale={{
             emptyText: 'No strategies yet. Click "Create Strategy" to add your first strategy.',

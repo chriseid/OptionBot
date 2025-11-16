@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from datetime import datetime
 from uuid import uuid4
 from .strategy_base import Strategy
@@ -28,11 +28,11 @@ class IronCondor(Strategy):
             created_at=created_at
         )
         
-        # Extract leg values from legs dict
-        self.long_put = legs.get('longPut')
-        self.short_put = legs.get('shortPut')
-        self.short_call = legs.get('shortCall')
-        self.long_call = legs.get('longCall')
+        # Extract leg delta values from legs dict (deltas are stored, not strikes)
+        self.long_put_delta = legs.get('longPut')  # Negative delta (e.g., -0.15)
+        self.short_put_delta = legs.get('shortPut')  # Negative delta (e.g., -0.25)
+        self.short_call_delta = legs.get('shortCall')  # Positive delta (e.g., 0.25)
+        self.long_call_delta = legs.get('longCall')  # Positive delta (e.g., 0.35)
     
     @classmethod
     def from_dict(cls, data: dict) -> 'IronCondor':
@@ -48,38 +48,42 @@ class IronCondor(Strategy):
         )
     
     def validate_legs(self) -> bool:
-        """Validate that all 4 legs are present and in correct order."""
-        if None in [self.long_put, self.short_put, self.short_call, self.long_call]:
+        """Validate that all 4 legs are present and deltas are in correct ranges."""
+        if None in [self.long_put_delta, self.short_put_delta, self.short_call_delta, self.long_call_delta]:
             return False
         
-        # Validate order: longPut < shortPut < shortCall < longCall
-        return (self.long_put < self.short_put < 
-                self.short_call < self.long_call)
+        # Validate delta ranges:
+        # Puts should be negative, calls should be positive
+        # longPut < shortPut (more negative = further OTM)
+        # shortCall < longCall (more positive = further OTM)
+        return (self.long_put_delta < self.short_put_delta < 0 and
+                0 < self.short_call_delta < self.long_call_delta)
     
     def calculate_max_profit(self) -> float:
-        """Calculate maximum profit (net credit received)."""
+        """Calculate maximum profit (net credit received).
+        Note: This is a simplified calculation. Actual max profit depends on premiums.
+        """
         # For Iron Condor, max profit is the net credit received
         # This is simplified - in reality, you'd calculate from premiums
-        # For now, we'll use a mock calculation
+        # Using delta-based approximation
         net_credit = 2.0  # Mock value - should be calculated from actual premiums
         return net_credit * self.quantity
     
     def calculate_max_loss(self) -> float:
-        """Calculate maximum loss."""
-        # Max loss = (Difference between outer strikes - net credit) * quantity
-        width_put_side = self.short_put - self.long_put
-        width_call_side = self.long_call - self.short_call
-        max_width = max(width_put_side, width_call_side)
-        net_credit = 2.0  # Mock value
-        return (max_width - net_credit) * self.quantity
+        """Calculate maximum loss.
+        Note: This requires strike prices, which are derived from deltas during backtest.
+        """
+        # Max loss calculation requires strikes, which are derived from deltas
+        # This is a placeholder - actual calculation happens during backtest
+        return 0.0
     
     def calculate_breakeven_points(self) -> List[float]:
-        """Calculate breakeven points."""
-        net_credit = 2.0  # Mock value
-        return [
-            self.short_put - net_credit,
-            self.short_call + net_credit
-        ]
+        """Calculate breakeven points.
+        Note: This requires strike prices, which are derived from deltas during backtest.
+        """
+        # Breakeven calculation requires strikes, which are derived from deltas
+        # This is a placeholder - actual calculation happens during backtest
+        return []
     
     def backtest(
         self,
@@ -101,18 +105,51 @@ class IronCondor(Strategy):
         if not filtered_data:
             raise ValueError(f"No historical data found for date range {start_date} to {end_date}")
         
-        # Helper function to find option price for a given leg
-        def find_option_price(date: str, strike: float, expiration: str, option_type: str) -> Optional[float]:
-            """Find option premium (mid price) from historical data."""
+        # Get underlying price for entry date to convert deltas to strikes
+        entry_day_data = next((d for d in filtered_data if d.get('date') == start_date), None)
+        if not entry_day_data:
+            raise ValueError(f"No historical data found for entry date {start_date}")
+        
+        underlying_price = entry_day_data.get('underlyingPrice', 0)
+        if underlying_price == 0:
+            raise ValueError(f"Invalid underlying price for date {start_date}")
+        
+        # Convert deltas to approximate strikes
+        # For puts (negative delta): strike ≈ underlyingPrice * (1 + delta)
+        # For calls (positive delta): strike ≈ underlyingPrice * (1 + delta)
+        def delta_to_strike(delta: float, option_type: str) -> float:
+            """Convert delta to approximate strike price."""
+            return underlying_price * (1 + delta)
+        
+        # Convert deltas to strikes
+        long_put_strike = delta_to_strike(self.long_put_delta, 'put')
+        short_put_strike = delta_to_strike(self.short_put_delta, 'put')
+        short_call_strike = delta_to_strike(self.short_call_delta, 'call')
+        long_call_strike = delta_to_strike(self.long_call_delta, 'call')
+        
+        # Helper function to find option price by strike (with tolerance for rounding)
+        def find_option_price_by_strike(date: str, target_strike: float, expiration: str, option_type: str, tolerance: float = 2.0) -> Tuple[Optional[float], Optional[float]]:
+            """Find option premium (mid price) and actual strike from historical data.
+            Returns (price, actual_strike) or (None, None) if not found.
+            """
             for day_data in filtered_data:
                 if day_data.get('date') == date:
                     options = day_data.get('options', [])
+                    best_match = None
+                    best_diff = float('inf')
+                    
                     for option in options:
-                        if (option.get('strike') == strike and
-                            option.get('expiration') == expiration and
+                        if (option.get('expiration') == expiration and
                             option.get('optionType') == option_type):
-                            return option.get('mid')  # Use mid price (average of bid/ask)
-            return None
+                            strike = option.get('strike', 0)
+                            diff = abs(strike - target_strike)
+                            if diff < best_diff and diff <= tolerance:
+                                best_diff = diff
+                                best_match = option
+                    
+                    if best_match:
+                        return (best_match.get('mid'), best_match.get('strike'))
+            return (None, None)
         
         # Simulate trades
         trades = []
@@ -122,16 +159,21 @@ class IronCondor(Strategy):
         entry_date = start_date
         
         # Create entry trades for each leg using actual option prices
-        if self.long_put:
-            entry_price = find_option_price(entry_date, self.long_put, self.expiration, 'put')
-            if entry_price is None:
+        # Store actual strikes used for exit trades
+        leg_strikes = {}
+        
+        if self.long_put_delta is not None:
+            entry_price, actual_strike = find_option_price_by_strike(entry_date, long_put_strike, self.expiration, 'put')
+            if entry_price is None or actual_strike is None:
                 entry_price = 0.5  # Fallback if option not found
+                actual_strike = long_put_strike
+            leg_strikes['long_put'] = actual_strike
             trades.append({
                 "date": entry_date,
                 "action": "buy",
                 "option": {
                     "symbol": self.symbol,
-                    "strike": self.long_put,
+                    "strike": actual_strike,
                     "expiration": self.expiration,
                     "optionType": "put",
                     "premium": entry_price,
@@ -141,16 +183,18 @@ class IronCondor(Strategy):
                 "pnl": -entry_price * self.quantity * 100  # Options are per 100 shares
             })
         
-        if self.short_put:
-            entry_price = find_option_price(entry_date, self.short_put, self.expiration, 'put')
-            if entry_price is None:
+        if self.short_put_delta is not None:
+            entry_price, actual_strike = find_option_price_by_strike(entry_date, short_put_strike, self.expiration, 'put')
+            if entry_price is None or actual_strike is None:
                 entry_price = 1.0  # Fallback if option not found
+                actual_strike = short_put_strike
+            leg_strikes['short_put'] = actual_strike
             trades.append({
                 "date": entry_date,
                 "action": "sell",
                 "option": {
                     "symbol": self.symbol,
-                    "strike": self.short_put,
+                    "strike": actual_strike,
                     "expiration": self.expiration,
                     "optionType": "put",
                     "premium": entry_price,
@@ -160,16 +204,18 @@ class IronCondor(Strategy):
                 "pnl": entry_price * self.quantity * 100
             })
         
-        if self.short_call:
-            entry_price = find_option_price(entry_date, self.short_call, self.expiration, 'call')
-            if entry_price is None:
+        if self.short_call_delta is not None:
+            entry_price, actual_strike = find_option_price_by_strike(entry_date, short_call_strike, self.expiration, 'call')
+            if entry_price is None or actual_strike is None:
                 entry_price = 1.0  # Fallback if option not found
+                actual_strike = short_call_strike
+            leg_strikes['short_call'] = actual_strike
             trades.append({
                 "date": entry_date,
                 "action": "sell",
                 "option": {
                     "symbol": self.symbol,
-                    "strike": self.short_call,
+                    "strike": actual_strike,
                     "expiration": self.expiration,
                     "optionType": "call",
                     "premium": entry_price,
@@ -179,16 +225,18 @@ class IronCondor(Strategy):
                 "pnl": entry_price * self.quantity * 100
             })
         
-        if self.long_call:
-            entry_price = find_option_price(entry_date, self.long_call, self.expiration, 'call')
-            if entry_price is None:
+        if self.long_call_delta is not None:
+            entry_price, actual_strike = find_option_price_by_strike(entry_date, long_call_strike, self.expiration, 'call')
+            if entry_price is None or actual_strike is None:
                 entry_price = 0.5  # Fallback if option not found
+                actual_strike = long_call_strike
+            leg_strikes['long_call'] = actual_strike
             trades.append({
                 "date": entry_date,
                 "action": "buy",
                 "option": {
                     "symbol": self.symbol,
-                    "strike": self.long_call,
+                    "strike": actual_strike,
                     "expiration": self.expiration,
                     "optionType": "call",
                     "premium": entry_price,
@@ -209,7 +257,7 @@ class IronCondor(Strategy):
         exit_trades = []
         for trade in trades:
             option = trade['option']
-            exit_price = find_option_price(exit_date, option['strike'], option['expiration'], option['optionType'])
+            exit_price, _ = find_option_price_by_strike(exit_date, option['strike'], option['expiration'], option['optionType'])
             
             # If exit date option not found, try to find closest date or use intrinsic value estimate
             if exit_price is None:
@@ -217,7 +265,7 @@ class IronCondor(Strategy):
                 for day_data in sorted(filtered_data, key=lambda x: x.get('date', ''), reverse=True):
                     options = day_data.get('options', [])
                     for opt in options:
-                        if (opt.get('strike') == option['strike'] and
+                        if (abs(opt.get('strike', 0) - option['strike']) <= 2.0 and
                             opt.get('expiration') == option['expiration'] and
                             opt.get('optionType') == option['optionType']):
                             exit_price = opt.get('mid')
@@ -282,10 +330,10 @@ class IronCondor(Strategy):
             "strategy": self.strategy_type,
             "expiration": self.expiration,
             "legs": {
-                "longPut": self.long_put,
-                "shortPut": self.short_put,
-                "shortCall": self.short_call,
-                "longCall": self.long_call
+                "longPut": self.long_put_delta,
+                "shortPut": self.short_put_delta,
+                "shortCall": self.short_call_delta,
+                "longCall": self.long_call_delta
             },
             "quantity": self.quantity,
             "createdAt": self.created_at

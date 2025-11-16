@@ -5,11 +5,11 @@ from datetime import datetime
 from fastapi import HTTPException, status
 
 from .file_service import read_json_file, write_json_file
-from ..schemas import (
+from schemas import (
     CreateStrategyRequest,
     UpdateStrategyRequest
 )
-from ..models.strategy_base import Strategy
+from models.strategy_base import Strategy
 
 # File paths
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")

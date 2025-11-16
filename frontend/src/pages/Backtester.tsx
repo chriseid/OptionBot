@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Form, InputNumber, DatePicker, Select, Button, Space } from 'antd';
-import { Strategy } from '../types';
-import { strategyService } from '../services/api';
+import { Card, Form, InputNumber, DatePicker, Select, Button, Space, Table, Statistic, Row, Col, message } from 'antd';
+import { Strategy, BacktestResult, Trade } from '../types';
+import { strategyService, backtestService } from '../services/api';
 import dayjs, { Dayjs } from 'dayjs';
 
 const { Option: SelectOption } = Select;
 
 const Backtester: React.FC = () => {
-  const [form] = Form.useForm();
+
   const [strategies, setStrategies] = useState<Strategy[]>([]);
   const [strategyId, setStrategyId] = useState('');
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
   const [endDate, setEndDate] = useState<Dayjs | null>(null);
   const [initialCapital, setInitialCapital] = useState(10000);
+
+  const [runningBacktest, setRunningBacktest] = useState(false);
+  const [backtestResult, setBacktestResult] = useState<BacktestResult | null>(null);
+  const [loading, setLoading] = useState(false);
 
   // Load strategies on mount
   useEffect(() => {
@@ -21,29 +25,38 @@ const Backtester: React.FC = () => {
 
   const loadStrategies = async () => {
     try {
-      // TODO: Use actual API call when backend is ready
-      // const response = await strategyService.getAll();
-      // setStrategies(response.data);
-      
-      // For now, load from localStorage or use empty array
-      // Strategies will be loaded from the Strategies page state
-      const savedStrategies = localStorage.getItem('strategies');
-      if (savedStrategies) {
-        setStrategies(JSON.parse(savedStrategies));
-      }
+      setLoading(true);
+      const response = await strategyService.getAll();
+      setStrategies(response.data);
     } catch (error) {
-      console.error('Failed to load strategies:', error);
+      message.error('Failed to load strategies');
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
-  const handleRunBacktest = () => {
-    // TODO: Implement backtest logic
-    console.log('Running backtest...', {
-      strategyId,
-      startDate: startDate?.format('YYYY-MM-DD'),
-      endDate: endDate?.format('YYYY-MM-DD'),
-      initialCapital,
-    });
+  const handleRunBacktest = async () => {
+    if (!strategyId || !startDate || !endDate) {
+      message.warning('Please fill in all fields');
+      return;
+    }
+
+    try {
+      setRunningBacktest(true);
+      const response = await backtestService.run(strategyId, {
+        startDate: startDate.format('YYYY-MM-DD'),
+        endDate: endDate.format('YYYY-MM-DD'),
+        initialCapital,
+      });
+      setBacktestResult(response.data);
+      message.success('Backtest completed successfully!');
+    } catch (error: any) {
+      message.error(error.response?.data?.detail || 'Failed to run backtest');
+      console.error(error);
+    } finally {
+      setRunningBacktest(false);
+    }
   };
 
   return (
@@ -60,6 +73,7 @@ const Backtester: React.FC = () => {
               value={strategyId}
               onChange={setStrategyId}
               placeholder="Select a strategy"
+              loading={loading}
             >
               {strategies.length === 0 ? (
                 <SelectOption value="">No strategies available</SelectOption>
@@ -104,6 +118,7 @@ const Backtester: React.FC = () => {
               type="primary"
               size="large"
               onClick={handleRunBacktest}
+              loading={runningBacktest}
               disabled={!strategyId || !startDate || !endDate}
             >
               Run Backtest
@@ -112,11 +127,93 @@ const Backtester: React.FC = () => {
         </Form>
       </Card>
 
-      <Card title="Backtest Results" style={{ marginTop: 24 }}>
-        <p style={{ color: '#666', margin: 0 }}>
-          Run a backtest to see results here
-        </p>
-      </Card>
+      {backtestResult && (
+        <Card title="Backtest Results" style={{ marginTop: 24 }}>
+          <Row gutter={16} style={{ marginBottom: 24 }}>
+            <Col xs={24} sm={12} lg={6}>
+              <Statistic
+                title="Total Return"
+                value={backtestResult.totalReturn}
+                precision={2}
+                suffix="%"
+                valueStyle={{ color: backtestResult.totalReturn >= 0 ? '#52c41a' : '#ff4d4f' }}
+              />
+            </Col>
+            <Col xs={24} sm={12} lg={6}>
+              <Statistic
+                title="Final Capital"
+                value={backtestResult.finalCapital}
+                precision={2}
+                prefix="$"
+              />
+            </Col>
+            <Col xs={24} sm={12} lg={6}>
+              <Statistic
+                title="Max Drawdown"
+                value={backtestResult.maxDrawdown}
+                precision={2}
+                suffix="%"
+                valueStyle={{ color: '#ff4d4f' }}
+              />
+            </Col>
+            <Col xs={24} sm={12} lg={6}>
+              <Statistic
+                title="Sharpe Ratio"
+                value={backtestResult.sharpeRatio}
+                precision={2}
+              />
+            </Col>
+          </Row>
+
+          <h3 style={{ marginTop: 24, marginBottom: 16 }}>Trades</h3>
+          <Table
+            columns={[
+              {
+                title: 'Date',
+                dataIndex: 'date',
+                key: 'date',
+                render: (date: string) => new Date(date).toLocaleDateString(),
+              },
+              {
+                title: 'Action',
+                dataIndex: 'action',
+                key: 'action',
+                render: (action: string) => action.toUpperCase(),
+              },
+              {
+                title: 'Strike',
+                dataIndex: ['option', 'strike'],
+                key: 'strike',
+              },
+              {
+                title: 'Type',
+                dataIndex: ['option', 'optionType'],
+                key: 'optionType',
+                render: (type: string) => type.toUpperCase(),
+              },
+              {
+                title: 'Price',
+                dataIndex: 'price',
+                key: 'price',
+                render: (price: number) => `$${price.toFixed(2)}`,
+              },
+              {
+                title: 'P&L',
+                dataIndex: 'pnl',
+                key: 'pnl',
+                render: (pnl: number) => (
+                  <span style={{ color: pnl >= 0 ? '#52c41a' : '#ff4d4f' }}>
+                    ${pnl.toFixed(2)}
+                  </span>
+                ),
+              },
+            ]}
+            dataSource={backtestResult.trades}
+            rowKey={(record, index) => `${record.date}-${index}`}
+            pagination={{ pageSize: 10 }}
+          />
+        </Card>
+      )}
     </div>
   );
 };
